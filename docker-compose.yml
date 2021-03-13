@@ -68,13 +68,10 @@ services:
       - globonet
 
   globosql:
-    image: mcr.microsoft.com/mssql/server
+    image: ladminrunner/globomantics_database
     restart: always
     ports:
       - "1435:1433"
-    environment:
-      - ACCEPT_EULA=Y
-      - SA_PASSWORD=Cata!123
     networks:
       - globonet
 
