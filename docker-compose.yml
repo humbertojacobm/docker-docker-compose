@@ -68,7 +68,7 @@ services:
       - globonet
 
   globosql:
-    image: ladminrunner/globomantics_database
+    image: humbertojacobm/globomantics_database
     restart: always
     ports:
       - "1435:1433"
