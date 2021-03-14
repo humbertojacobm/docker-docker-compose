@@ -148,5 +148,14 @@ GO
 
 ALTER TABLE dbo.[UserToken] CHECK CONSTRAINT [FK_UserToken_User_UserId]
 GO
-
+use master;
+go
+create login [globo_dbuser] with password=N'Cata!123', check_expiration=off, check_policy=on;
+go
+use Globomantics
+go
+create user [globo_dbuser] for login [globo_dbuser]
+go
+exec sp_addrolemember N'db_owner',[globo_dbuser]
+go
 
